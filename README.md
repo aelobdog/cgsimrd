@@ -5,14 +5,13 @@ CGSIMRD(Coarse Grained Simulation of RNA and DNA) is a software package (set of 
 
 ## Dependencies
 The project depends on the following software packages
-   - LAMMPS<sup>3</sup>
-   - tacoxDNA<sup>2</sup>
-   - VMD<sup>3</sup>
-   - Curl<sup>3</sup>
+   - LAMMPS<sup>2</sup> ([website](https://www.lammps.org/))
+   - tacoxDNA<sup>1</sup> ([website](http://tacoxdna.sissa.it/))
+   - VMD<sup>2</sup> ([website](https://www.ks.uiuc.edu/Research/vmd/))
+   - Curl<sup>2</sup> ([website](https://curl.se/))
 
-<sup>1</sup> cgsimrd ships with `LAMMPS`. Binary compiled on POP\_OS, x64.
-<sup>2</sup> cgsimrd ships with `tacoxDNA`. No downloads required.
-<sup>3</sup> cgsimrd does not ship with this. You'll have to install it yourself.
+<sup>1</sup> cgsimrd ships with `tacoxDNA`. No downloads required.
+<sup>2</sup> cgsimrd does not ship with this. You'll have to install it yourself.
 
 ## Directory structure
 As of now, the project requires the following project structure.
@@ -49,6 +48,4 @@ The source directory contains the following files :
    - tmpl\_dna.in          --> template input file for DNA pdbs
    - tmpl\_rna.in          --> template input file for RNA pdbs
    - visualize.sh          --> visualizes trajectory file using vmd
-   - lmp                   --> mpi binary of lammps
-   - lse                   --> serial binary of lammps
 ```

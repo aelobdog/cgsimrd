@@ -21,6 +21,6 @@ if [ ! -f inp/$input.in ]; then
 fi
 
 cd sim
-../src/lmp -in ../inp/$input.in
+lmp -in ../inp/$input.in
 mv $1-$tempK.xyz $input.xyz
 cd ..
