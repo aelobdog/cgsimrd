@@ -49,4 +49,6 @@ The source directory contains the following files :
    - tmpl\_dna.in          --> template input file for DNA pdbs
    - tmpl\_rna.in          --> template input file for RNA pdbs
    - visualize.sh          --> visualizes trajectory file using vmd
+   - setup.sh              --> creates the directories that don't 
+                               get downloaded after "git clone"
 ```
