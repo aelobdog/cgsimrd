@@ -1,5 +1,5 @@
 # CGSIMRD 
-CGSIMRD(Coarse Grained Simulation of RNA and DNA) is a software package (set of scripts) that aids in performing coarse grain simulations of RNA and DNA simulations using LAMMPS.
+CGSIMRD(Coarse Grained Simulation of RNA and DNA) is a software package (set of scripts) that aids in performing coarse grain simulations of RNA and DNA using LAMMPS.
 
 *<u>DISCLAIMER</u> This project is under development, which means there will be breaking changes from time to time*
 
