@@ -1,16 +1,17 @@
 # CGSIMRD 
 CGSIMRD(Coarse Grained Simulation of RNA and DNA) is a software package (set of scripts) that aids in performing coarse grain simulations of RNA and DNA using LAMMPS.
 
-*<u>DISCLAIMER</u> This project is under development, which means there will be breaking changes from time to time*
+**_DISCLAIMER_ This project is under development, which means there will be breaking changes from time to time**
 
 ## Dependencies
 The project depends on the following software packages
-   - LAMMPS<sup>2</sup> ([website](https://www.lammps.org/))
-   - tacoxDNA<sup>1</sup> ([website](http://tacoxdna.sissa.it/))
-   - VMD<sup>2</sup> ([website](https://www.ks.uiuc.edu/Research/vmd/))
-   - Curl<sup>2</sup> ([website](https://curl.se/))
+   - LAMMPS <sup>2</sup> ([website](https://www.lammps.org/))
+   - tacoxDNA <sup>1</sup> ([website](http://tacoxdna.sissa.it/))
+   - VMD <sup>2</sup> ([website](https://www.ks.uiuc.edu/Research/vmd/))
+   - Curl <sup>2</sup> ([website](https://curl.se/))
 
 <sup>1</sup> cgsimrd ships with `tacoxDNA`. No downloads required.
+
 <sup>2</sup> cgsimrd does not ship with this. You'll have to install it yourself.
 
 ## Directory structure
