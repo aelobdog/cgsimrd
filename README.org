@@ -1,4 +1,3 @@
-#+TITLE: CGSIMRD
 #+AUTHOR: Ashwin Godbole
 #+OPTIONS: ^:{}
 
