@@ -12,25 +12,24 @@ This project is under active development. Stuff *will* break from time to time.
 The project depends on the following software packages
 + LAMMPS^{2} ([[https://www.lammps.org/][website]])
 + tacoxDNA^{1} ([[http://tacoxdna.sissa.it/][website]])
-+ VMD^{2} ([[https://www.ks.uiuc.edu/Research/vmd/][website]])
++ oxview^{2} ([[https://github.com/sulcgroup/oxdna-viewer][website]])
 + Curl^{2} ([[https://curl.se/][website]])
 
 1 : cgsimrd ships with *tacoxDNA*.
 
-2 : cgsimrd *does not* ship with LAMMPS, VMD or Curl.
-
-(Regarding VMD, users may use any visualization software (eg: pymol). I use VMD and therefore have listed that as a dependency.)
+2 : cgsimrd *does not* ship with LAMMPS, oxview or Curl.
 
 ** Directory structure
 As of now, the project requires the following project structure.
 #+begin_src
    .
-   ├── inp [ generated lammps input scripts ]
-   ├── lib [ tacoxDNA ]
-   ├── lmp [ generated lammps data files (by tacoxDNA) ]
-   ├── pdb [ downloaded pdb files ]
-   ├── sim [ generated trajectory, energy data files ]
-   └── src [ all the source scripts ]
+   ├── inp         [ generated lammps input scripts ]
+   ├── lib         [ tacoxDNA ]
+   ├── lmp         [ generated lammps data files (by tacoxDNA) ]
+   ├── pdb         [ downloaded pdb files ]
+   ├── sim         [ generated trajectory, energy data files ]
+   ├── oxdna_files [ store the oxdna config and topology files for visualizations ]
+   └── src         [ all the source scripts ]
 #+end_src
 
 ** Directories
@@ -45,15 +44,5 @@ The source directory contains the following files :
    ├── simulate.sh      --> performs simulation using input files and lammps
    ├── tmpl_dna.in      --> template input file for DNA pdbs
    ├── tmpl_rna.in      --> template input file for RNA pdbs
-   └── visualize.sh     --> visualizes trajectory file using vmd
+   └── visualize.sh     --> visualizes trajectory file using oxview
 #+end_src
-
-** Generated 'Output' Files
-Every simulation produces a certain number of files with data regarding the trajectory of particles or their energy at certain time-steps during the simulations. These files are then used later for further analysis and for visualizaing the simulation.
-
-Since those files contain only the data and no instructions regarding how the data in those files is to be interpretted, I'm putting that information here.
-
-| File extension | Description                                                     |
-|----------------+-----------------------------------------------------------------|
-| xyz            | contains data required by visualization software                |
-| energy         | contains energy data, can be used by other scripts for analysis |
