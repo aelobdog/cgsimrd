@@ -15,7 +15,7 @@ temp=`echo $2 | sed "s/\./_/g"`
 conc=`echo $3 | sed "s/\./_/g"`
 dest="inp/$1-${temp}C-${conc}M.in"
 tempK=$(echo "$2 + 273.15" | bc)
-tempS=$(python3 -c "print(0.000333 * $tempK)")
+tempS=$(python3 -c "print($tempK/3000)")
 
 if [ $4 = "rna" ]; then
    src="src/tmpl_rna.in"

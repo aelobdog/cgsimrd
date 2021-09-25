@@ -19,7 +19,17 @@ The project depends on the following software packages
 
 2 : cgsimrd *does not* ship with LAMMPS, oxview or Curl.
 
-** Directory structure
+** Simulation Process
+The simulation process has many steps. These are :
++ download the necessary pdb file
++ convert the pdb file into oxDNA config and topology files
++ convert the oxDNA files to a LAMMPS data file
++ generate an input script for LAMMPS
++ perform the simulation
++ convert the trajectory file into oxDNA config and topology files
++ visualize the oxDNA files using oxview
+
+** Root Directory Structure
 As of now, the project requires the following project structure.
 #+begin_src
    .
@@ -46,3 +56,6 @@ The source directory contains the following files :
    ├── tmpl_rna.in      --> template input file for RNA pdbs
    └── visualize.sh     --> visualizes trajectory file using oxview
 #+end_src
+
+** Usage
+Currently, the path to the lammps executable is set to a hardcoded path on my system. You'll need to change that in `src/simulate.sh` to be able to run the script.

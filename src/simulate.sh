@@ -1,10 +1,9 @@
 #!/bin/sh
-# usage : sh simulate.sh <pdbname>
 usage() {
-   echo "usage : sh simulate.sh <pdbname> <temperature> <molarity>"
+   echo "usage : sh simulate.sh <pdbname> <temperature> <molarity> <ser/par>"
 }
 
-if [ $# -ne 3 ]; then
+if [ $# -ne 4 ]; then
    echo "\e[0;31mERROR\e[0m: Check number of arguments."
    echo "  └── Expected 3, got $#\n"
    usage
@@ -15,6 +14,7 @@ temp=`echo $2 | sed "s/\./_/g"`
 conc=`echo $3 | sed "s/\./_/g"`
 tempK=$(echo "$2 + 273.15" | bc)
 input=$1-${temp}C-${conc}M
+energy=$1-${temp}-${conc}.energy
 
 if [ ! -f inp/$input.in ]; then
    echo "\e[0;31mERROR\e[0m: input file does NOT EXIST for "
@@ -25,5 +25,9 @@ if [ ! -f inp/$input.in ]; then
 fi
 
 cd sim
-lmp -in ../inp/$input.in
+if [ $4 = "mpi" ]; then
+   mpirun -np 4 ~/Downloads/buildDesk/lammps/build_mpi/lmp < ../inp/$input.in
+elif [ $4 = "ser" ]; then
+   ~/Documents/lmp_serial < ../inp/$input.in
+fi
 cd ..
